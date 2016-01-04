@@ -1,0 +1,13 @@
+<div ng-show="movieDetail">
+    <h1>{{movieDetail.name}}</h1>
+    <div><span>Directed by: {{movieDetail.Director}}</span></div>
+    <div>
+        <span>Cast:</span>
+        <ul>
+            <li ng-repeat="cast in movieDetail.cast">
+                {{cast}}
+            </li>
+        </ul>
+    </div>
+</div>
+<span ng-hide="movieDetail">Something went wrong while retrieving movie details!</span>

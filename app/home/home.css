@@ -1,0 +1,123 @@
+ul.m_list{
+    list-style-type: none;
+}
+
+ul.m_list > li.m_entry{
+    float: left;
+    background-color: lavender;
+    width: 300px;
+    padding: 2px;
+    border: 1px solid lightblue;
+    margin-right: 20px;
+}
+
+ul.m_list > li.m_entry > div.m_title {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+ul.m_list > li.m_entry > div.m_image {
+    height: 300px;
+    width: 300px;
+}
+
+ul.m_list > li.m_entry > div.m_lan {
+    float: left;
+}
+
+ul.m_list > li.m_entry > div.m_price {
+    float: right;
+}
+ul.m_list > li.m_entry > div.m_popularity{
+    clear : both;
+    float : left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ul.m_list > li.m_entry  div.pop_circle_full {
+    background-color: gold;
+    border-radius: 10px;
+    height: 15px;
+    width: 15px;
+    border: 1px solid goldenrod;
+    float: left;
+    margin-right: 5px;
+}
+
+ul.m_list > li.m_entry  div.pop_circle_empty {
+    background-color: grey;
+    border-radius: 10px;
+    height: 15px;
+    width: 15px;
+    border: 1px solid black;
+    float: left;
+    margin-right: 5px;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+/*
+  We're using CSS transitions for when
+  the enter and move events are triggered
+  for the element that has the .repeated-item
+  class
+*/
+.m_entry.ng-enter, .m_entry.ng-move {
+    -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+    opacity:0;
+}
+
+/*
+ The ng-enter-active and ng-move-active
+ are where the transition destination properties
+ are set so that the animation knows what to
+ animate.
+*/
+.m_entry.ng-enter.ng-enter-active,
+.m_entry.ng-move.ng-move-active {
+    opacity:1;
+}
+
+/*
+  We're using CSS keyframe animations for when
+  the leave event is triggered for the element
+  that has the .repeated-item class
+*/
+.m_entry.ng-leave {
+    -webkit-animation:0.5s my_animation;
+    -moz-animation:0.5s my_animation;
+    -o-animation:0.5s my_animation;
+    animation:0.5s my_animation;
+}
+
+@keyframes my_animation {
+    from { opacity:1; }
+    to { opacity:0; }
+}
+
+/*
+  Unfortunately each browser vendor requires
+  its own definition of keyframe animation code...
+*/
+@-webkit-keyframes my_animation {
+    from { opacity:1; }
+    to { opacity:0; }
+}
+
+@-moz-keyframes my_animation {
+    from { opacity:1; }
+    to { opacity:0; }
+}
+
+@-o-keyframes my_animation {
+    from { opacity:1; }
+    to { opacity:0; }
+}

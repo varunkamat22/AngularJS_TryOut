@@ -1,0 +1,23 @@
+[
+  {
+    "name" : "Star Wars : The Force Awakens",
+    "language" : "English",
+    "genre" : ["action","sci-fi"],
+    "rating" : "U/A",
+    "price" : 200.00,
+    "popularity" : 4,
+    "img_link" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbexAGYVhDhrVh64nUEwjVSgceoxfp9ER56Z3hxanEvQG-QIkC_Q",
+    "id" : "1"
+  },
+  {
+    "name" : "Star Trek Into Darkness",
+    "language" : "English",
+    "genre" : ["action","sci-fi"],
+    "rating" : "U/A",
+    "price" : 200.00,
+    "popularity" : 3,
+    "img_link" : "http://scifanatic.wpengine.netdna-cdn.com/wp-content/uploads/2012/12/star-trek-into-darkness-poster1.jpg",
+    "id" : 2
+  }
+
+]
